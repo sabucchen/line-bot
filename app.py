@@ -50,6 +50,30 @@ def handle_message(event):
             event.reply_token,
             sticker_message)
         return
+    if '旅遊資訊' in msg:
+        TemplateSendMessage(
+           alt_text='ImageCarousel template',
+           template=ImageCarouselTemplate(
+                columns=[
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item1.jpg',
+                        action=PostbackAction(
+                            label='postback1',
+                            display_text='postback text1',
+                            data='action=buy&itemid=1'
+                        )
+                    ),
+                    ImageCarouselColumn(
+                        image_url='https://example.com/item2.jpg',
+                        action=PostbackAction(
+                            label='postback2',
+                            display_text='postback text2',
+                            data='action=buy&itemid=2'
+                        )
+                    )
+                ]
+            )
+        )
 
 
 
