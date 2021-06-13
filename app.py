@@ -49,7 +49,7 @@ def handle_message(event):
     elif mtext in ['位置', '實體店面', '地址']: #傳送位置
         sendMap(event)
 
-    elif mtext == '你好':
+    elif mtext == 'hi':
         sendHi(event)
 
     elif mtext == '導覽機器人服務':
